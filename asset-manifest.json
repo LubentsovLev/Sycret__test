@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Sycret__test/static/css/main.626f3f26.chunk.css",
+    "main.js": "/Sycret__test/static/js/main.69b9500b.chunk.js",
+    "main.js.map": "/Sycret__test/static/js/main.69b9500b.chunk.js.map",
+    "runtime-main.js": "/Sycret__test/static/js/runtime-main.d7cf3ef7.js",
+    "runtime-main.js.map": "/Sycret__test/static/js/runtime-main.d7cf3ef7.js.map",
+    "static/js/2.c23e4718.chunk.js": "/Sycret__test/static/js/2.c23e4718.chunk.js",
+    "static/js/2.c23e4718.chunk.js.map": "/Sycret__test/static/js/2.c23e4718.chunk.js.map",
+    "static/js/3.9e883a8b.chunk.js": "/Sycret__test/static/js/3.9e883a8b.chunk.js",
+    "static/js/3.9e883a8b.chunk.js.map": "/Sycret__test/static/js/3.9e883a8b.chunk.js.map",
+    "index.html": "/Sycret__test/index.html",
+    "static/css/main.626f3f26.chunk.css.map": "/Sycret__test/static/css/main.626f3f26.chunk.css.map",
+    "static/js/2.c23e4718.chunk.js.LICENSE.txt": "/Sycret__test/static/js/2.c23e4718.chunk.js.LICENSE.txt",
+    "static/media/45.6cf37826.svg": "/Sycret__test/static/media/45.6cf37826.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d7cf3ef7.js",
+    "static/js/2.c23e4718.chunk.js",
+    "static/css/main.626f3f26.chunk.css",
+    "static/js/main.69b9500b.chunk.js"
+  ]
+}
