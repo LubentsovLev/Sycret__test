@@ -10,16 +10,15 @@ const News = () => {
   const dispatch = useDispatch();
   const news = useSelector((state) => state.news.News);
   const isFetching = useSelector((state) => state.news.isFetching);
+  const req = useSelector((state) => state.news.req);
   const [Reqested, setReqested] = React.useState(false);
   const [popupInfo, setPopupInfo] = React.useState({});
   const [popActive, setPopActive] = React.useState(false);
   const checkOffset = function () {
-    console.log('gg');
     functions.debounceFunc();
-    if (document.documentElement.scrollHeight - window.pageYOffset <= 7000) {
-      if (!Reqested) {
+    if (document.documentElement.scrollHeight - window.pageYOffset <= 10000) {
+      if (!req) {
         dispatch(addNews());
-        setReqested(true);
       }
     }
   };
@@ -33,12 +32,8 @@ const News = () => {
   React.useEffect(() => {
     dispatch(addNews());
     window.addEventListener('scroll', onChangeDeb);
-    // window.addEventListener('mousemove', onChangeDeb);
-    // window.addEventListener('click  ', onChangeDeb);
   }, []);
-  React.useEffect(() => {
-    // setReqested(false);
-  }, [isFetching, news]);
+  React.useEffect(() => {}, [isFetching, news, req]);
 
   return (
     <div className={s.container}>

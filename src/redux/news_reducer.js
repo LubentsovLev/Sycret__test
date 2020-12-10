@@ -2,10 +2,12 @@ import { newsApi } from '../api/api';
 
 const SET_NEWS = 'NEWS/SET_NEWS';
 const SET_IS_FETCHING = 'NEWS/IS_FETCHING';
+const SET_IS_REQ = 'NEWS/SET_IS_REQ';
 
 let initialState = {
   News: [],
   isFetching: false,
+  req: false,
 };
 
 const newsReducer = (state = initialState, action) => {
@@ -15,6 +17,9 @@ const newsReducer = (state = initialState, action) => {
     }
     case SET_IS_FETCHING: {
       return { ...state, isFetching: action.isFetching };
+    }
+    case SET_IS_REQ: {
+      return { ...state, req: action.req };
     }
     default:
       return state;
@@ -32,9 +37,17 @@ export const setIsFetching = (isFetching) => {
     isFetching,
   };
 };
+export const setIsReq = (req) => {
+  return {
+    type: SET_IS_REQ,
+    req,
+  };
+};
 export const addNews = () => async (dispath) => {
   dispath(setIsFetching(true));
+  dispath(setIsReq(true));
   let response = await newsApi.getNews();
+  dispath(setIsReq(false));
   dispath(setNews(response));
   dispath(setIsFetching(false));
 };

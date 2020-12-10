@@ -26,11 +26,11 @@ const MainApp = (props) => {
   return (
     // <BrowserRouter basename={process.env.PUBLIC_URL}></BrowserRouter>
     // <HashRouter></HashRouter>
-    <BrowserRouter>
+    <HashRouter>
       <Provider store={store}>
         <WrappedApp />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

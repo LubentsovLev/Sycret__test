@@ -17,18 +17,18 @@ const PopUp = (props) => {
           />
         </div>
         <div
-          // style={{
-          //   backgroundImage: `url(${inst.urlToImage || null})`,
-          // }}
+          style={{
+            backgroundImage: `url(${inst.url || null})`,
+          }}
           className={s.PopUp__img}
         >
-          <img src={inst.urlToImage} alt="" />
+          {/* <img src={inst.urlToImage} alt="" /> */}
         </div>
         <div className={s.PopUp__body}>
           <div className={s.PopUp__body_cont}>
-            <div className={s.post__title}>{inst.source.name}</div>
+            <div className={s.post__title}>{inst.date}</div>
             <div className={s.PopUp__title}>{inst.title}</div>
-            <div className={s.PopUp__text}>{inst.description}</div>
+            <div className={s.PopUp__text}>{inst.explanation}</div>
           </div>
         </div>
       </div>
